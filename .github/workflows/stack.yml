@@ -1,6 +1,5 @@
 name: CI
 
-
 on:
   push:
     branches:
@@ -15,5 +14,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setup Stack
       uses: mstksg/setup-stack@v2
+    - name: Setup caching
+      uses: actions/cache@v1
+      with:
+        path: ~/.stack
+        key: ${{ runner.os }}-stack
     - name: Run test
       run: stack test
