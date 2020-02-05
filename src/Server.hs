@@ -4,7 +4,7 @@
 
 module Server where
 
-import Api (fetchDepartures)
+import Client (fetchDepartures)
 import Control.Monad.IO.Class (liftIO)
 import Data.Aeson
 import Data.Proxy
