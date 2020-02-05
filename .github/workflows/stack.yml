@@ -12,4 +12,4 @@ jobs:
     - name: Setup Stack
     - uses: mstksg/setup-stack@v2
     - name: Run test
-    - run: stack test
+      run: stack test
